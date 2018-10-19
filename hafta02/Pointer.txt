@@ -1,0 +1,55 @@
+-----POINTER------
+
+Pointer, RAM icerisinde bir adres alanini tutan ozel bir degiskendir.
+Pointer, baslangic adresini tutar.
+Pointer, herhangi bir bellek alaninin adresini tutar.
+
+Program her calistiginda RAM'de degiskenlerin adresi degisir.
+& => Bu isaret gordugumuz zaman adres bilgisi tuttugunu anlayacagiz.
+
+1-)AVANTAJLARI
+Pointer yardimiyla istedigimiz elemana rastgele erisebiliriz.
+Pointer dinamik bellek yaklasimini sagliyor.
+
+
+ORNEK
+
+#include <stdio.h>
+
+int main(){
+
+	int a=10;
+	int *p;
+	p= &a;
+
+	printf("%d",*p); => p'nin gosterdigi adresin degerini ekrana yazar.
+	printf("%d", p); => p'nin gosterdigi yerin adresini ekrana yazar.
+	printf("%d", a); => a'nin degerini ekrana yazar.
+	printf("%d", &a);=> a'nin adresini ekrana yazar.
+	printf("%d", &p);=> p'nin adresini ekrana yazar.
+	getch();
+	return 0;
+}
+
+Array(Dizi) ve Pointer(Gosterici) Arasindaki Farklar
+1-) Dizide bir kere boyut tanimladigimizda daha degistirme sansimiz yoktur. Fakat
+Pointer'da boyutu istedigimiz boyutta tanimlayip daha sonra boyutu degistirebiliyoruz.
+
+
+
+
+
+
+
+NOT...
+Her dizi bir pointer ve her pointer dogal bir dizidir.
+
+	int[80], *p1;     Burada p1, d dizisinin ilk elemaninin degerini alir.
+	p1=d; 		  Yani dizi adi, aslinda o dizinin hafizadaki baslangic
+			  adresini tutmaktadir. d dizisinin 5.Elemanina erismek
+			  icin ise; d[4] veya *(p1+4)ifadelerini kullanabiliriz.
+		 	  Her ikisinin de anlami aynidir.
+
+
+p1= &d[8]; => d'nin 8.elamaninin adresini p1'e koy anlamina gelmektedir.
+
