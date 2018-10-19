@@ -1,0 +1,19 @@
+----DIZILER----
+
+Ayni tip verilerin birbiri arkasina bir degiskende tanimlanmasidir.
+Ayni tip verilere tek bir isimle erismek icin kullanilir.
+Indisleri 0'dan baslar. Sirali sekilde bellege yerlesir.
+
+1-)Avantajlari
+
+Baska veri tiplerini kullanmak(Bagli liste, kuyruk) vb. gibi icin kullanilir.
+Birden fazla elemani ayni degiskende kullanmak icin avantajlidir.
+Rastgele elemanlara erisim saglayabiliriz.
+
+
+2-)Dezavantajlari
+
+Kac tane eleman kullanacagimizi(yani dizinin boyutunu) bilmemiz gerekmektedir.
+Bellekteki alani degistirilemez.
+Boyutu sabit oldugu icin gerektiginden fazla yer ayýrýrsak bellegi yorar.
+Sirali bellek yaklasimi oldugu icin, ekleme-silme islemi zor oluyor.
