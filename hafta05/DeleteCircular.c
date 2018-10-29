@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+// ################ DAIRESEL LIST'TEN PARAMETRE OLARAK GONDERILEN DEGERI ICEREN DUGUMU SILME ################
 struct Node {
 
 	int data;
