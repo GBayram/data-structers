@@ -79,6 +79,37 @@ void deleteNode(Node **head_ref, Node *del) {
 
 }
 
+void deleteKeyNode(Node **head_ref, int key) {
+
+	Node *temp = *head_ref;
+
+	// silinecek eleman ilk eleman ise;
+	if (temp->data == key) {
+
+		*head_ref = temp->next; // temp'in nextini head_ref yaptik.(Cunku bas dugum silineceginden dugumlerde diger 
+								// elemanlara ulasmamiz icin silinecek bas dugumden bir sonraki dugumu bas dugum olarak atadik.)
+		(*head_ref)->prev = NULL; // yeni bas dugumun prev'ini NULL yap.
+		free(temp); // eski bas dugumu sil.	
+	}
+	else {
+
+		while (temp->data != key) {
+			temp = temp->next;
+		}
+		// yani son eleman silinecek ise;
+		if (temp->next == NULL) {
+			temp->prev->next = NULL;
+			free(temp);
+		}
+		else { // arada bir eleman ise;
+			temp->prev->next = temp->next;
+			temp->next->prev = temp->prev;
+			free(temp);
+		}
+	}
+
+}
+
 //dugumlerin sirasini degistirme:(son dugum ilk,sondan bir oncki 2.,.......ilk dugum son dugum olur)
 void reverse(struct Node** head_ref) {
 	struct Node* temp = NULL;
@@ -117,6 +148,7 @@ int main() {
 	print(head);
 	printf("\n");
 //	deleteNode(&head, head->next);
+//  deleteKeyNode(&head,5);
 	reverse(&head);
 	print(head);
 	return 0;
