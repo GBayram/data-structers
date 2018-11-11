@@ -74,6 +74,13 @@ void parInsert(Node **head_ref, int data, int after) {
 	Node *new_node = (Node*)malloc(sizeof(Node));
 	new_node->data = data;
 
+	// Eger gelen key degeri bas dugum ise;
+	if (temp->data == key) {
+
+		new_node->next = temp->next;
+		temp->next = new_node;
+	}
+
 	while (temp -> data != after) {
 		
 		temp = temp->next;
