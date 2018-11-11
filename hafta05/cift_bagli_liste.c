@@ -13,7 +13,6 @@ struct  Node {
 typedef struct Node Node;
 
 // BASA EKLEME
-
 void push(Node **head_ref, int data) {
 
 	Node *new_node = (Node*)malloc(sizeof(Node));
