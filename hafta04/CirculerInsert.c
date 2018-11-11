@@ -33,22 +33,38 @@ int basaEkle(Node **head_ref, int data) {
 }
 
 // ########### PARAMETRE OLARAK GONDERILEN DEGERDEN SONRASINA EKLEME YAPMA ###########
-void insertAfter(Node *head, int data, int key) {
+void insertAfter(Node **head, int data, int key) {
 
-	while (head == NULL)
-		return;
-
-	Node *temp = head;
-	Node *new_node = (Node*)malloc(sizeof(Node));
+	Node *temp = *head;
+	Node *new_node = (Node*)malloc(sizeof(Node*));
 	new_node->data = data;
 
-	while (temp->data != key) {
-		temp = temp->next;
-	} 
-	new_node->next = temp->next;
-	temp->next = new_node;
+	if (*head == NULL) // bas dugum bossa(hic dugum yoksa)
+		return; // geri dondur.
 
-}// ########### PARAMETRE OLARAK GONDERILEN DEGERDEN SONRASINA EKLEME YAPMA ###########
+	// Gelen key degeri, head(bas dugume) esitse;
+	if (temp->data == key) {
+		new_node->next = temp->next;
+		temp->next = new_node;
+	}
+	// degilse;
+	else {
+		while (temp->data != key) { // key degeri, temp'in datasindan farkli oldugu surece temp'in nextine git.
+			temp = temp->next;
+		}
+		// Sona eleman ekleme.
+		if (temp->next == *head) { // Eger temp'in nexti, bas dugum ise;
+			new_node->next = *head; // new_node'un nexti bas dugumu gostersin.
+			temp->next = new_node; // temp'in nexti de, new_nodu gostersin.
+		}
+		// Araya eleman ekleme.
+		else {
+			new_node->next = temp->next;
+			temp->next = new_node;
+		}
+	}
+}
+// ########### PARAMETRE OLARAK GONDERILEN DEGERDEN SONRASINA EKLEME YAPMA ###########
 
 
 
