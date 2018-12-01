@@ -62,7 +62,7 @@ int pop(Stack *stack) {
 }
 
 int main() {
-
+	 
 	Stack *stack = createStack(3);
 	
 	push(stack, 10);
