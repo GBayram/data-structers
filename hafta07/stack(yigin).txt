@@ -1,0 +1,9 @@
+
+ Tek tarafli giris ve cikislara acik olan. Ilk giren son cikar mantigi ile calisan bir ADT(Abstract Data Type) ornegidir.
+ Temelde 2 veya 3 fonksiyon ile calisir.
+ 
+ 1-) push -> Stack icerisine bir bilgi koymaya (Stackin en tepesine koyar)
+ 2-) Pop -> Stack icerisinden bir bilgi almaya (Stackin en tepesinden alir)
+ 3-) Top -> Stackin en tepesindeki bilgiyi alir ancak stackten cikartmaz sadece okur.
+
+ Temel olarak stack, bir array(dizi) veya linkedlist(bagli list) uzerine insa edilebilir.
