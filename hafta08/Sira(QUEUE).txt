@@ -1,0 +1,11 @@
+KUYRUK(QUEUE)
+
+- Ilk giren, ilk cikar mantigiyla calisir.(First int, first out)
+- Ornek olarak bir bilet kuyrugu dusunebiliriz. Kuyruga ilk giren isini bitirip ilk cikan kisidir.
+
+Bu yapinin olmazsa olmaz iki adet fonksiyonu bulunur.
+1-) enque(veri) veya push(veri) -> verilen veriyi siraya koyar.
+2-) deque() veya pop() -> siradan bir veri cikararak siranin boyutunu azaltir ve cikarilan veriyi cagrildigi yere dondurur
+
+Sira-Kuyruk(Queue) icerisine veri ekleme fonksiyonu genel olarak enqueue(siraya koymak, siralamak) ve siradaki bir elemanin siradan 
+alinmasina ise dequeue (siradan almak, cikarmak) ismi verilmektedir
