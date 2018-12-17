@@ -1,0 +1,11 @@
+
+BINARY TREES(IKILI AGACLAR)
+Ikili arama agaclarindaki herhangi bir dugumun altinda bos bir dugum olabilir.
+Her dugumun cocuklarinin sayisi max. 2 olabilir. 
+Bir dugumun daha az cocugu bulunmasi durumunda ( 0 veya 1) agacin yapisi bozulmaz. 
+Yapraklar haric butun dugumlerin ikiser cocugu bulunmasi ve yapraklarin ayni derinlikte bulunmasi durumunda bu agaca dengeli agac (balanced tree) 
+denilir.
+
+BINARY SEARCH TREE(IKILI ARAMA AGACI)
+Kokun solunda bulunan butun sayilar kokten kucuk ve saginda bulunan butun sayilar kokten buyuktur.
+Ikili arama agacina bu kurula uygun olarak ekleme cikarma veya silme islemleri yapilabilir. Ancak yapilan her islemden sonra ikili arama agacinin yapisi bozulmamis olmalidir.
