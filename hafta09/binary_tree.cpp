@@ -19,11 +19,23 @@ struct Node* newNode(int data) {
 	return n;
 }
 
+// Ekrana yazdirma.
+void printTree(Node *root) {
+
+	if (root == NULL) {
+		return;
+	}
+	printTree(root->left);
+	printf("%d ", root->data);
+	printTree(root->right);
+}
+
 int main() {
 	Node *root = newNode(1); // kok dugumumuzu olusturduk.
 	root->left = newNode(3); // kok dugumuzun soluna 3 degerini koyduk.
 	root->right = newNode(4); // kok dugumuzun sagina 4 degerini koyduk.
 	root->left->left = newNode(5); 
-
+	printTree(root);
+	
 	return 0;
 }
