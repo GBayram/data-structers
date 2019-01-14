@@ -8,7 +8,7 @@ int minDist(int arr[], int n, int x, int y) {
 
 	int i, j;
 	int min_dist = INT_MAX; // int turunde max sayiyi min_dist degiskenine atadik.
-
+	 
 	for (i = 0; i < n ; i++)
 	{
 		for ( j = i+1 ;  j < n ;  j++)

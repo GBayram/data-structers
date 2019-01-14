@@ -10,7 +10,7 @@ Baska veri tiplerini kullanmak(Bagli liste, kuyruk) vb. gibi icin kullanilir.
 Birden fazla elemani ayni degiskende kullanmak icin avantajlidir.
 Rastgele elemanlara erisim saglayabiliriz.
 
-
+  
 2-)Dezavantajlari
 
 Kac tane eleman kullanacagimizi(yani dizinin boyutunu) bilmemiz gerekmektedir.
