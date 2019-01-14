@@ -31,12 +31,12 @@ void push(Node **head_ref, int data) {
 		while (temp->next != *head_ref) {
 			temp = temp->next;
 		}
-		
+
 		temp->next = new_node; // son dugumun next'ini yeni dugumle degistir.
 		new_node->next = *head_ref; // yeni dugumun next'i headi gostersin.
 		*head_ref = new_node; // ve headi yeni dugum olarak degistir.
 	}
-	
+
 }
 
 
@@ -54,7 +54,7 @@ void deleteNode(Node **head_ref, int key) {
 
 	Node *temp = *head_ref;
 	Node *prew = NULL; // Bu atamayi yapmazsak hata alacagiz.
-	
+
 
 	while (temp->data != key) {
 
@@ -70,27 +70,27 @@ void deleteNode(Node **head_ref, int key) {
 	// 1-) Silecegimiz veri basta olabilir.
 	// 2-) Silecegimiz veri ortada olabilir.
 	// 3-) Silecegimiz veri sonda olabilir.
-	
+
 
 	// Silecegimiz dugum BASTA ise...
 	if (temp == *head_ref) {
 
-	prew = *head_ref; // prew normalde silinecek dugumden bir onceki dugumu tutuyordu fakat burada yukaridaki while dongusune girmeyerek direk buraya geldi.
+		prew = *head_ref; // prew normalde silinecek dugumden bir onceki dugumu tutuyordu fakat burada yukaridaki while dongusune girmeyerek direk buraya geldi.
 
-	while (prew->next != *head_ref) { // silinecek dugumu son dugum gosterdiginden son dugume gidilir.
+		while (prew->next != *head_ref) { // silinecek dugumu son dugum gosterdiginden son dugume gidilir.
 
-		prew = prew->next;
+			prew = prew->next;
 		}
 		*head_ref = temp->next; //head dugumunu ikinci dugum yaptik.
-		 prew->next = *head_ref; // son dugum yeni dugum oldu.
-		 free(temp);
+		prew->next = *head_ref; // son dugum yeni dugum oldu.
+		free(temp);
 	}
 	// Silecegimiz dugum SONDA ise;
 	else if (temp->next == *head_ref) {
 
 		prew->next = *head_ref; // silinecek dugumu gosteren dugumun next'ini head'e ata.
 		free(temp);
-		}
+	}
 
 	// Silecegimiz dugum ORTADA ise;
 
@@ -98,10 +98,10 @@ void deleteNode(Node **head_ref, int key) {
 
 		prew->next = temp->next; //silinecek dugumden onceki dugum,silinecek dugumden sonraki dugumu gostersin
 		free(temp); // Aradaki dugumu sil.
-	 }
 	}
+}
 
-void goster(Node *head){
+void goster(Node *head) {
 
 	Node *temp = head;
 
@@ -115,7 +115,7 @@ void goster(Node *head){
 int main() {
 
 	Node *head = NULL;
-	
+
 	push(&head, 8);
 	push(&head, 7);
 	push(&head, 6);
