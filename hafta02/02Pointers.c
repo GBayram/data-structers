@@ -9,4 +9,4 @@
 	printf("%u\n", p); // p'nin icerisinde tutulan adresi ekrana basacak.
 	printf("%u", &a); // a'nin adresini ekrana yazacak. Yani bir ustteki bastirdigimiz degerle a'nin adresi ayni cikacak.
 
-}*/
+}*/ 

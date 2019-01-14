@@ -21,4 +21,4 @@ void value(a,b) { // Pass By Value(Degiskenin kopyasini gonderme)
 	a++;
 	b++;
 
-}
+} 

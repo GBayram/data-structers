@@ -16,7 +16,7 @@ int main() {
 	q[3] =70; // Bu bir pointer ama dizi seklinde kullaniyoruz. 
 	printf("\n %d", q[3]);
 
-	f(&a);
+	f(&a); 
 	printf("\n %d", a);
 	g(a);
 	printf("\n %d", a);
